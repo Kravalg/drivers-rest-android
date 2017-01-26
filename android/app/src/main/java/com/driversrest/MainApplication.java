@@ -1,4 +1,4 @@
-package com.driversrestapp;
+package com.driversrest;
 
 import android.app.Application;
 import android.util.Log;
