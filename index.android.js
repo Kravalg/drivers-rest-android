@@ -18,17 +18,97 @@ export default class DriversRest extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={{flexDirection: 'row', justifyContent: 'space-between',}}>
-          <View style={{ width: 100, height: 100 }} >
+        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+          <View style={{ width: 90, height: 90 }} >
               <Button title="ENTER START COUNTRY" color="green" />
           </View>
-          <View style={{ width: 100, height: 100 }} >
+          <View style={{ width: 90, height: 90 }} >
               <Button title="ENTER END COUNTRY" color="red" />
           </View>
         </View>
-        <View style={{ borderColor: 'white', borderWidth: 1, width: 300}} >
-            <MovingBar
-                color={'green'}styleAttr="Horizontal" indeterminate={false} />
+
+        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+          <View style={{ width: 70, justifyContent: 'center', alignItems: 'center'}} >
+              <View style={{ width: 70, height: 70 }} >
+                <Button title="All start/Stop" color="gainsboro" />
+              </View>
+          </View>
+          <View style={{ width: 200, justifyContent: 'center', alignItems: 'center'}} >
+              <View style={{ borderColor: 'white', borderWidth: 1, width: 200}} >
+                  <MovingBar
+                      color={'green'} styleAttr="Horizontal" indeterminate={false} />
+              </View>
+          </View>
+          <View style={{ width: 70, height: 65, justifyContent: 'center', alignItems: 'center'}} >
+              <View style={{ width: 50, borderColor: 'white', borderWidth: 1, backgroundColor: 'brown'}} >
+                  <Text style={styles.rightTimer}>
+                    {0.15}
+                  </Text>
+                </View>
+          </View>
+        </View>
+
+        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+          <View style={{ width: 70, justifyContent: 'center', alignItems: 'center'}} >
+              <View style={{ width: 70, height: 70 }} >
+                <Button title="All start/Stop" color="gainsboro" />
+              </View>
+          </View>
+          <View style={{ width: 200, justifyContent: 'center', alignItems: 'center'}} >
+              <View style={{ borderColor: 'white', borderWidth: 1, width: 200}} >
+                  <MovingBar
+                      color={'green'} styleAttr="Horizontal" indeterminate={false} />
+              </View>
+          </View>
+          <View style={{ width: 70, height: 65, justifyContent: 'center', alignItems: 'center'}} >
+              <View style={{ width: 50, borderColor: 'white', borderWidth: 1, backgroundColor: 'green'}} >
+                  <Text style={styles.rightTimer}>
+                    {1.52}
+                  </Text>
+                </View>
+          </View>
+        </View>
+
+        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+          <View style={{ width: 70, justifyContent: 'center', alignItems: 'center'}} >
+              <View style={{ width: 70, height: 70 }} >
+                <Button title="D" color="gainsboro" />
+              </View>
+          </View>
+          <View style={{ width: 200, justifyContent: 'center', alignItems: 'center'}} >
+              <View style={{ borderColor: 'white', borderWidth: 1, width: 200}} >
+                  <MovingBar
+                      color={'green'} styleAttr="Horizontal" indeterminate={false} />
+              </View>
+          </View>
+          <View style={{ width: 70, height: 65, justifyContent: 'center', alignItems: 'center'}} >
+              <View style={{ width: 50, borderColor: 'white', borderWidth: 1, backgroundColor: 'green'}} >
+                  <Text style={styles.rightTimer}>
+                    {6.47}
+                  </Text>
+                </View>
+          </View>
+        </View>
+
+        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+          <View style={{ width: 70, justifyContent: 'center', alignItems: 'center'}} >
+              <View style={{ width: 70, height: 70 }} >
+                <Button title="W" color="gainsboro" />
+              </View>
+          </View>
+          <View style={{ width: 200, justifyContent: 'center', alignItems: 'center'}} >
+              <View style={{ borderColor: 'white', borderWidth: 1, width: 200}} >
+                  <MovingBar
+                      color={'green'} styleAttr="Horizontal" indeterminate={false} />
+              </View>
+          </View>
+          <View style={{ width: 70, justifyContent: 'center', alignItems: 'center'}} >
+              <View style={{ width: 50, borderColor: 'white', borderWidth: 1, backgroundColor: 'orange'}} >
+                <Text style={styles.rightTimerDanger}>
+                  {16.42}
+                </Text>
+              </View>
+          </View>
         </View>
       </View>
     );
@@ -51,6 +131,16 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#fff',
     marginBottom: 5,
+  },
+  rightTimer: {
+    textAlign: 'center',
+    color: '#fff',
+    padding: 5
+  },
+  rightTimerDanger: {
+    textAlign: 'center',
+    color: 'black',
+    padding: 5
   },
 });
 
