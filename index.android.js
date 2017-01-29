@@ -7,5 +7,4 @@
 
 
 //index.ios.js
-import DriversRest from './android/Class/Country.js'
 
