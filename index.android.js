@@ -125,36 +125,36 @@ export default class DriversRest extends Component {
 
         <View style={{ flexDirection: 'row'}}>
           <View style={{ flex: 0.2 , justifyContent: 'center', alignItems: 'center'}} >
-              <View style={{ borderColor: 'white', borderWidth: 1, backgroundColor: 'red', borderRadius: 5}} >
+              <View style={{ borderColor: 'white', borderWidth: 2, backgroundColor: 'red', borderRadius: 5}} >
                   <Text style={styles.footer15}>
                     {15}
                   </Text>
               </View>
           </View>
           <View style={{ flex: 0.2 , justifyContent: 'center', alignItems: 'center'}} >
-              <View style={{ borderColor: 'white', borderWidth: 1, backgroundColor: 'red', borderRadius: 5}} >
+              <View style={{ borderColor: 'white', borderWidth: 2, backgroundColor: 'red', borderRadius: 5}} >
                   <Text style={styles.footer15}>
                     {15}
                   </Text>
               </View>
           </View>
           <View style={{ flex: 0.2 , justifyContent: 'center', alignItems: 'center'}} >
-              <View style={{ borderColor: 'white', borderWidth: 1, backgroundColor: 'black', borderRadius: 5}} >
+              <View style={{ borderColor: 'white', borderWidth: 2, backgroundColor: 'black', borderRadius: 5}} >
                 <Text style={styles.footer15}>
                   {15}
                 </Text>
               </View>
           </View>
           <View style={{ flex: 0.2 , justifyContent: 'center', alignItems: 'center'}} >
-              <View style={{ width: 50, borderColor: 'white', borderWidth: 1, backgroundColor: 'white'}} >
-                <Text style={styles.rightTimerDanger}>
-                  {10}
-                </Text>
+              <View style={{ borderColor: 'white', borderWidth: 2, backgroundColor: 'red', borderRadius: 30}} >
+                  <Text style={styles.circleButton}>
+                    {10}
+                  </Text>
               </View>
           </View>
-          <View style={{ flex: 0.2 , justifyContent: 'center', alignItems: 'center'}} >
-              <View style={{ width: 50, borderColor: 'white', borderWidth: 1, backgroundColor: 'white'}} >
-                <Text style={styles.rightTimerDanger}>
+          <View style={{ flex: 0.2 , justifyContent: 'flex-end', alignItems: 'center', marginTop: 15}} >
+              <View style={{ borderColor: 'white', borderWidth: 1, backgroundColor: 'green'}} >
+                <Text style={styles.toggleButton}>
                   {24}
                 </Text>
               </View>
@@ -164,36 +164,36 @@ export default class DriversRest extends Component {
 
         <View style={{ flexDirection: 'row'}}>
           <View style={{ flex: 0.2 , justifyContent: 'center', alignItems: 'center', marginTop: 10}} >
-              <View style={{ borderColor: 'white', borderWidth: 1, backgroundColor: 'red', borderRadius: 5}} >
-                  <Text style={styles.footer15}>
+              <View style={{ borderColor: 'aquamarine', borderWidth: 2, backgroundColor: 'red', borderRadius: 5}} >
+                  <Text style={styles.footer9}>
                     {9}
                   </Text>
               </View>
           </View>
           <View style={{ flex: 0.2 , justifyContent: 'center', alignItems: 'center', marginTop: 10}} >
-              <View style={{ borderColor: 'white', borderWidth: 1, backgroundColor: 'red', borderRadius: 5}} >
-                  <Text style={styles.footer15}>
+              <View style={{ borderColor: 'aquamarine', borderWidth: 2, backgroundColor: 'red', borderRadius: 5}} >
+                  <Text style={styles.footer9}>
                     {9}
                   </Text>
               </View>
           </View>
           <View style={{ flex: 0.2 , justifyContent: 'center', alignItems: 'center', marginTop: 10}} >
-              <View style={{ borderColor: 'white', borderWidth: 1, backgroundColor: 'black', borderRadius: 5}} >
-                <Text style={styles.footer15}>
+              <View style={{ borderColor: 'aquamarine', borderWidth: 2, backgroundColor: 'black', borderRadius: 5}} >
+                <Text style={styles.footer9}>
                   {9}
                 </Text>
               </View>
           </View>
-          <View style={{ flex: 0.2 , justifyContent: 'center', alignItems: 'center'}} >
-              <View style={{ width: 50, borderColor: 'white', borderWidth: 1, backgroundColor: 'white'}} >
-                <Text style={styles.rightTimerDanger}>
+          <View style={{ flex: 0.2 , justifyContent: 'center', alignItems: 'center', marginTop: 10}} >
+              <View style={{ borderColor: 'white', borderWidth: 2, backgroundColor: 'black', borderRadius: 30}} >
+                <Text style={styles.circleButton}>
                   {10}
                 </Text>
               </View>
           </View>
-          <View style={{ flex: 0.2 , justifyContent: 'center', alignItems: 'center'}} >
-              <View style={{ width: 50, borderColor: 'white', borderWidth: 1, backgroundColor: 'white'}} >
-                <Text style={styles.rightTimerDanger}>
+          <View style={{ flex: 0.2 , justifyContent: 'flex-start', alignItems: 'center'}} >
+              <View style={{ borderColor: 'white', borderWidth: 1, backgroundColor: 'black'}} >
+                <Text style={styles.toggleButton}>
                   {45}
                 </Text>
               </View>
@@ -253,11 +253,25 @@ const styles = StyleSheet.create({
   },
   footer9: {
     width: 50,
+    color: 'aquamarine',
+    textAlign: 'center',
+    fontSize: 25,
+    fontWeight: 'bold',
+    padding: 10
+  },
+  circleButton: {
     color: 'white',
     textAlign: 'center',
     fontSize: 25,
     fontWeight: 'bold',
     padding: 10
+  },
+  toggleButton: {
+    color: 'white',
+    textAlign: 'center',
+    fontSize: 25,
+    fontWeight: 'bold',
+    padding: 15
   },
 });
 
