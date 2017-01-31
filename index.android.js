@@ -19,13 +19,23 @@ export default class DriversRest extends Component {
     return (
       <View style={styles.container}>
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-          <View style={{ width: 90, height: 90 }} >
-              <Button title="ENTER START COUNTRY" color="green" />
+          <View style={{ width: 140 }} >
+              <Text style={styles.startButton}>
+                ENTER {'\n'}
+                START {'\n'}
+                COUNTRY
+              </Text>
           </View>
-          <View style={{ width: 90, height: 90 }} >
-              <Button title="ENTER END COUNTRY" color="red" />
+          <View style={{ width: 140 }} >
+              <Text style={styles.endButton}>
+                  ENTER {'\n'}
+                  END {'\n'}
+                  COUNTRY
+              </Text>
           </View>
         </View>
+
+        <View style={{height: 1, borderTopWidth: 1, borderColor: 'gainsboro', marginBottom: 20, marginTop: 20}}></View>
 
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
           <View style={{ width: 70, justifyContent: 'center', alignItems: 'center'}} >
@@ -65,7 +75,7 @@ export default class DriversRest extends Component {
                   <Text style={styles.rightTimer}>
                     {1.52}
                   </Text>
-                </View>
+              </View>
           </View>
         </View>
 
@@ -110,6 +120,86 @@ export default class DriversRest extends Component {
               </View>
           </View>
         </View>
+
+        <View style={{height: 1, borderTopWidth: 1, borderColor: 'gainsboro', marginBottom: 20, marginTop: 20}}></View>
+
+        <View style={{ flexDirection: 'row'}}>
+          <View style={{ flex: 0.2 , justifyContent: 'center', alignItems: 'center'}} >
+              <View style={{ borderColor: 'white', borderWidth: 1, backgroundColor: 'red', borderRadius: 5}} >
+                  <Text style={styles.footer15}>
+                    {15}
+                  </Text>
+              </View>
+          </View>
+          <View style={{ flex: 0.2 , justifyContent: 'center', alignItems: 'center'}} >
+              <View style={{ borderColor: 'white', borderWidth: 1, backgroundColor: 'red', borderRadius: 5}} >
+                  <Text style={styles.footer15}>
+                    {15}
+                  </Text>
+              </View>
+          </View>
+          <View style={{ flex: 0.2 , justifyContent: 'center', alignItems: 'center'}} >
+              <View style={{ borderColor: 'white', borderWidth: 1, backgroundColor: 'black', borderRadius: 5}} >
+                <Text style={styles.footer15}>
+                  {15}
+                </Text>
+              </View>
+          </View>
+          <View style={{ flex: 0.2 , justifyContent: 'center', alignItems: 'center'}} >
+              <View style={{ width: 50, borderColor: 'white', borderWidth: 1, backgroundColor: 'white'}} >
+                <Text style={styles.rightTimerDanger}>
+                  {10}
+                </Text>
+              </View>
+          </View>
+          <View style={{ flex: 0.2 , justifyContent: 'center', alignItems: 'center'}} >
+              <View style={{ width: 50, borderColor: 'white', borderWidth: 1, backgroundColor: 'white'}} >
+                <Text style={styles.rightTimerDanger}>
+                  {24}
+                </Text>
+              </View>
+          </View>
+        </View>
+
+
+        <View style={{ flexDirection: 'row'}}>
+          <View style={{ flex: 0.2 , justifyContent: 'center', alignItems: 'center', marginTop: 10}} >
+              <View style={{ borderColor: 'white', borderWidth: 1, backgroundColor: 'red', borderRadius: 5}} >
+                  <Text style={styles.footer15}>
+                    {9}
+                  </Text>
+              </View>
+          </View>
+          <View style={{ flex: 0.2 , justifyContent: 'center', alignItems: 'center', marginTop: 10}} >
+              <View style={{ borderColor: 'white', borderWidth: 1, backgroundColor: 'red', borderRadius: 5}} >
+                  <Text style={styles.footer15}>
+                    {9}
+                  </Text>
+              </View>
+          </View>
+          <View style={{ flex: 0.2 , justifyContent: 'center', alignItems: 'center', marginTop: 10}} >
+              <View style={{ borderColor: 'white', borderWidth: 1, backgroundColor: 'black', borderRadius: 5}} >
+                <Text style={styles.footer15}>
+                  {9}
+                </Text>
+              </View>
+          </View>
+          <View style={{ flex: 0.2 , justifyContent: 'center', alignItems: 'center'}} >
+              <View style={{ width: 50, borderColor: 'white', borderWidth: 1, backgroundColor: 'white'}} >
+                <Text style={styles.rightTimerDanger}>
+                  {10}
+                </Text>
+              </View>
+          </View>
+          <View style={{ flex: 0.2 , justifyContent: 'center', alignItems: 'center'}} >
+              <View style={{ width: 50, borderColor: 'white', borderWidth: 1, backgroundColor: 'white'}} >
+                <Text style={styles.rightTimerDanger}>
+                  {45}
+                </Text>
+              </View>
+          </View>
+        </View>
+
       </View>
     );
   }
@@ -141,6 +231,33 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'black',
     padding: 5
+  },
+  startButton: {
+    backgroundColor: 'green',
+    color: 'white',
+    textAlign: 'center',
+    padding: 5
+  },
+  endButton: {
+    backgroundColor: 'red',
+    color: 'white',
+    textAlign: 'center',
+    padding: 5
+  },
+  footer15: {
+    color: 'white',
+    textAlign: 'center',
+    fontSize: 25,
+    fontWeight: 'bold',
+    padding: 10
+  },
+  footer9: {
+    width: 50,
+    color: 'white',
+    textAlign: 'center',
+    fontSize: 25,
+    fontWeight: 'bold',
+    padding: 10
   },
 });
 
