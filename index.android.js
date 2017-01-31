@@ -38,18 +38,18 @@ export default class DriversRest extends Component {
         <View style={{height: 1, borderTopWidth: 1, borderColor: 'gainsboro', marginBottom: 20, marginTop: 20}}></View>
 
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-          <View style={{ width: 70, justifyContent: 'center', alignItems: 'center'}} >
+          <View style={{ flex: 0.2, justifyContent: 'center', alignItems: 'center'}} >
               <View style={{ width: 70, height: 70 }} >
                 <Button title="All start/Stop" color="gainsboro" />
               </View>
           </View>
-          <View style={{ width: 200, justifyContent: 'center', alignItems: 'center'}} >
+          <View style={{ flex: 0.6, justifyContent: 'center', alignItems: 'center'}} >
               <View style={{ borderColor: 'white', borderWidth: 1, width: 200}} >
                   <MovingBar
                       color={'green'} styleAttr="Horizontal" indeterminate={false} />
               </View>
           </View>
-          <View style={{ width: 70, height: 65, justifyContent: 'center', alignItems: 'center'}} >
+          <View style={{ flex: 0.2, height: 65, justifyContent: 'center', alignItems: 'center'}} >
               <View style={{ width: 50, borderColor: 'white', borderWidth: 1, backgroundColor: 'brown'}} >
                   <Text style={styles.rightTimer}>
                     {0.15}
@@ -59,18 +59,18 @@ export default class DriversRest extends Component {
         </View>
 
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-          <View style={{ width: 70, justifyContent: 'center', alignItems: 'center'}} >
+          <View style={{ flex: 0.2, justifyContent: 'center', alignItems: 'center'}} >
               <View style={{ width: 70, height: 70 }} >
                 <Button title="All start/Stop" color="gainsboro" />
               </View>
           </View>
-          <View style={{ width: 200, justifyContent: 'center', alignItems: 'center'}} >
+          <View style={{ flex: 0.6, justifyContent: 'center', alignItems: 'center'}} >
               <View style={{ borderColor: 'white', borderWidth: 1, width: 200}} >
                   <MovingBar
                       color={'green'} styleAttr="Horizontal" indeterminate={false} />
               </View>
           </View>
-          <View style={{ width: 70, height: 65, justifyContent: 'center', alignItems: 'center'}} >
+          <View style={{ flex: 0.2, height: 65, justifyContent: 'center', alignItems: 'center'}} >
               <View style={{ width: 50, borderColor: 'white', borderWidth: 1, backgroundColor: 'green'}} >
                   <Text style={styles.rightTimer}>
                     {1.52}
@@ -80,18 +80,18 @@ export default class DriversRest extends Component {
         </View>
 
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-          <View style={{ width: 70, justifyContent: 'center', alignItems: 'center'}} >
+          <View style={{ flex: 0.2, justifyContent: 'center', alignItems: 'center'}} >
               <View style={{ width: 70, height: 70 }} >
                 <Button title="D" color="gainsboro" />
               </View>
           </View>
-          <View style={{ width: 200, justifyContent: 'center', alignItems: 'center'}} >
+          <View style={{ flex: 0.6, justifyContent: 'center', alignItems: 'center'}} >
               <View style={{ borderColor: 'white', borderWidth: 1, width: 200}} >
                   <MovingBar
                       color={'green'} styleAttr="Horizontal" indeterminate={false} />
               </View>
           </View>
-          <View style={{ width: 70, height: 65, justifyContent: 'center', alignItems: 'center'}} >
+          <View style={{ flex: 0.2, height: 65, justifyContent: 'center', alignItems: 'center'}} >
               <View style={{ width: 50, borderColor: 'white', borderWidth: 1, backgroundColor: 'green'}} >
                   <Text style={styles.rightTimer}>
                     {6.47}
@@ -101,18 +101,18 @@ export default class DriversRest extends Component {
         </View>
 
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-          <View style={{ width: 70, justifyContent: 'center', alignItems: 'center'}} >
+          <View style={{ flex: 0.2, justifyContent: 'center', alignItems: 'center'}} >
               <View style={{ width: 70, height: 70 }} >
                 <Button title="W" color="gainsboro" />
               </View>
           </View>
-          <View style={{ width: 200, justifyContent: 'center', alignItems: 'center'}} >
+          <View style={{ flex: 0.6, justifyContent: 'center', alignItems: 'center'}} >
               <View style={{ borderColor: 'white', borderWidth: 1, width: 200}} >
                   <MovingBar
                       color={'green'} styleAttr="Horizontal" indeterminate={false} />
               </View>
           </View>
-          <View style={{ width: 70, justifyContent: 'center', alignItems: 'center'}} >
+          <View style={{ flex: 0.2, justifyContent: 'center', alignItems: 'center'}} >
               <View style={{ width: 50, borderColor: 'white', borderWidth: 1, backgroundColor: 'orange'}} >
                 <Text style={styles.rightTimerDanger}>
                   {16.42}
