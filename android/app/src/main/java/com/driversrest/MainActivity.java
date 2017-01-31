@@ -1,6 +1,7 @@
 package com.driversrest;
 
 import com.facebook.react.ReactActivity;
+import com.devfd.RNGeocoder.RNGeocoderPackage; 
 
 public class MainActivity extends ReactActivity {
 
@@ -12,4 +13,18 @@ public class MainActivity extends ReactActivity {
     protected String getMainComponentName() {
         return "DriversRest";
     }
+}
+
+
+
+
+public class MainActivity extends ReactActivity {
+
+  @Override
+  protected List<ReactPackage> getPackages() {
+    return Arrays.<ReactPackage>asList(
+            new MainReactPackage(),
+            new RNGeocoderPackage()); 
+  }
+
 }

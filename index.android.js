@@ -3,8 +3,3 @@
  * https://github.com/facebook/react-native
  * @flow
  */
-
-
-
-//index.ios.js
-
