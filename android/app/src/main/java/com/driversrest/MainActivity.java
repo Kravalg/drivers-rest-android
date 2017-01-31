@@ -13,14 +13,8 @@ public class MainActivity extends ReactActivity {
     protected String getMainComponentName() {
         return "DriversRest";
     }
-}
 
-
-
-
-public class MainActivity extends ReactActivity {
-
-  @Override
+     @Override
   protected List<ReactPackage> getPackages() {
     return Arrays.<ReactPackage>asList(
             new MainReactPackage(),
@@ -28,3 +22,10 @@ public class MainActivity extends ReactActivity {
   }
 
 }
+
+
+
+
+
+
+ 
