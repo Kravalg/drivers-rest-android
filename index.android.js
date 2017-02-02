@@ -3,8 +3,8 @@
  * https://github.com/facebook/react-native
  * @flow
  */
-<<<<<<< HEAD
-=======
+//<<<<<<< HEAD
+//=======
 
 import React, { Component } from 'react';
 import {
@@ -305,4 +305,4 @@ var MovingBar = React.createClass({
 });
 
 AppRegistry.registerComponent('DriversRest', () => DriversRest);
->>>>>>> 44992ec9a055df0c8cbc2b3b95d2e73704aeef52
+//>>>>>>> 44992ec9a055df0c8cbc2b3b95d2e73704aeef52
