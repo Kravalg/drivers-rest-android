@@ -14,7 +14,14 @@ import {
   Button,
   View
 } from 'react-native';
+import LocalStorage from './android/class/LocalStorage';
 
+/**
+LocalStorage.set('@App:test', 'test');
+let valuels = LocalStorage.get('@App:test').then((value) => {
+  alert(value);
+}).done();
+**/
 
 export default class DriversRest extends Component {
   render() {
