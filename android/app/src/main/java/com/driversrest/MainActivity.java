@@ -1,7 +1,6 @@
 package com.driversrest;
 
 import com.facebook.react.ReactActivity;
-import com.devfd.RNGeocoder.RNGeocoderPackage; 
 
 public class MainActivity extends ReactActivity {
 

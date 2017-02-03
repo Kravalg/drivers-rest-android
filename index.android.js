@@ -15,6 +15,8 @@ import {
   View
 } from 'react-native';
 import LocalStorage from './android/class/LocalStorage';
+import Geolocation from './android/class/Geolocation';
+
 
 /**
 LocalStorage.set('@App:test', 'test');
@@ -26,6 +28,7 @@ let valuels = LocalStorage.get('@App:test').then((value) => {
 export default class DriversRest extends Component {
   render() {
     return (
+            // Position Geocoding
       <View style={styles.container}>
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
           <View style={{ width: 140 }} >
@@ -309,6 +312,9 @@ var MovingBar = React.createClass({
              progress={this.state.progress} {...this.props}
      />;
  }
+
+
+
 });
 
 AppRegistry.registerComponent('DriversRest', () => DriversRest);
