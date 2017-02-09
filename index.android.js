@@ -12,6 +12,7 @@ import {
   StyleSheet,
   Text,
   Button,
+  Image,
   View
 } from 'react-native';
 import LocalStorage from './android/class/LocalStorage';
@@ -51,8 +52,11 @@ export default class DriversRest extends Component {
 
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
           <View style={{ flex: 0.2, justifyContent: 'center', alignItems: 'center'}} >
-              <View style={{ width: 70, height: 70 }} >
-                <Button title="All start/Stop" color="gainsboro" />
+              <View style={styles.imgBorderButton} >
+                <Image
+                  style={styles.imgButton}
+                  source={require('./img/buttonAll.jpeg')}
+                />
               </View>
           </View>
           <View style={{ flex: 0.6, justifyContent: 'center', alignItems: 'center'}} >
@@ -72,8 +76,11 @@ export default class DriversRest extends Component {
 
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
           <View style={{ flex: 0.2, justifyContent: 'center', alignItems: 'center'}} >
-              <View style={{ width: 70, height: 70 }} >
-                <Button title="All start/Stop" color="gainsboro" />
+              <View style={styles.imgBorderButton} >
+                <Image
+                  style={styles.imgButton}
+                  source={require('./img/buttonDrive.jpeg')}
+                />
               </View>
           </View>
           <View style={{ flex: 0.6, justifyContent: 'center', alignItems: 'center'}} >
@@ -93,8 +100,11 @@ export default class DriversRest extends Component {
 
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
           <View style={{ flex: 0.2, justifyContent: 'center', alignItems: 'center'}} >
-              <View style={{ width: 70, height: 70 }} >
-                <Button title="D" color="gainsboro" />
+              <View style={styles.imgBorderButton} >
+                <Image
+                  style={styles.imgButton}
+                  source={require('./img/buttonD.jpeg')}
+                />
               </View>
           </View>
           <View style={{ flex: 0.6, justifyContent: 'center', alignItems: 'center'}} >
@@ -114,8 +124,11 @@ export default class DriversRest extends Component {
 
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
           <View style={{ flex: 0.2, justifyContent: 'center', alignItems: 'center'}} >
-              <View style={{ width: 70, height: 70 }} >
-                <Button title="W" color="gainsboro" />
+              <View style={styles.imgBorderButton} >
+                <Image
+                  style={styles.imgButton}
+                  source={require('./img/buttonW.jpeg')}
+                />
               </View>
           </View>
           <View style={{ flex: 0.6, justifyContent: 'center', alignItems: 'center'}} >
@@ -227,33 +240,39 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textAlign: 'center',
     margin: 10,
+    fontWeight: 'bold',
     color: '#fff',
   },
   instructions: {
     textAlign: 'center',
     color: '#fff',
+    fontWeight: 'bold',
     marginBottom: 5,
   },
   rightTimer: {
     textAlign: 'center',
     color: '#fff',
+    fontWeight: 'bold',
     padding: 5
   },
   rightTimerDanger: {
     textAlign: 'center',
     color: 'black',
+    fontWeight: 'bold',
     padding: 5
   },
   startButton: {
     backgroundColor: 'green',
     color: 'white',
     textAlign: 'center',
+    fontWeight: 'bold',
     padding: 5
   },
   endButton: {
     backgroundColor: 'red',
     color: 'white',
     textAlign: 'center',
+    fontWeight: 'bold',
     padding: 5
   },
   footer15: {
@@ -284,6 +303,16 @@ const styles = StyleSheet.create({
     fontSize: 25,
     fontWeight: 'bold',
     padding: 15
+  },
+  imgButton: {
+    width: 65,
+    height: 65
+  },
+  imgBorderButton: {
+      borderWidth: 2,
+      borderColor: 'grey',
+      backgroundColor: 'gainsboro',
+      margin: 2
   },
 });
 
