@@ -11,6 +11,7 @@ import {
   StyleSheet,
   Text,
   Button,
+  TouchableOpacity,
   Image,
   View
 } from 'react-native';
@@ -33,12 +34,13 @@ export default class DriversRest extends Component {
       <View style={styles.container}>
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
           <View style={{ width: 140 }} >
-           
+           <TouchableOpacity onPress={this.playSound}>
               <Text style={styles.startButton}>
                 ENTER {'\n'}
                 START {'\n'}
                 COUNTRY
               </Text>
+            </TouchableOpacity>
             
           </View>
           <View style={{ width: 140 }} >
@@ -231,6 +233,7 @@ export default class DriversRest extends Component {
       </View>
     );
   }
+
  
 }
 
