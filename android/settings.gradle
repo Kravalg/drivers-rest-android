@@ -3,3 +3,7 @@ include ':react-native-geocoder', ':app'
 project(':react-native-geocoder').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-geocoder/android')
 rootProject.name = 'DriversRest'
 include ':app'
+include ':RNSound', ':app'
+project(':RNSound').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-sound/android')
+include ':RNAudioPlayer', ':app'
+project(':RNAudioPlayer').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-audioplayer/android')

@@ -10,6 +10,9 @@ import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
 import com.devfd.RNGeocoder.RNGeocoderPackage;
+import com.zmxv.RNSound.RNSoundPackage;
+import com.sh3rawi.RNAudioPlayer.*; 
+
 
 
 import java.util.Arrays;
@@ -27,7 +30,10 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
-          new RNGeocoderPackage()
+          new RNGeocoderPackage(),
+          new RNSoundPackage(),
+          new RNAudioPlayer()
+
       );
     }
   };

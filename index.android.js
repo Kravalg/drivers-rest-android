@@ -3,8 +3,7 @@
  * https://github.com/facebook/react-native
  * @flow
  */
-//<<<<<<< HEAD
-//=======
+
 
 import React, { Component } from 'react';
 import {
@@ -16,6 +15,7 @@ import {
 } from 'react-native';
 import LocalStorage from './android/class/LocalStorage';
 import Geolocation from './android/class/Geolocation';
+import SoundPlay from './android/class/SoundPlay';
 
 
 /**
@@ -32,11 +32,13 @@ export default class DriversRest extends Component {
       <View style={styles.container}>
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
           <View style={{ width: 140 }} >
+           
               <Text style={styles.startButton}>
                 ENTER {'\n'}
                 START {'\n'}
                 COUNTRY
               </Text>
+            
           </View>
           <View style={{ width: 140 }} >
               <Text style={styles.endButton}>
@@ -46,6 +48,7 @@ export default class DriversRest extends Component {
               </Text>
           </View>
         </View>
+
 
         <View style={{height: 1, borderTopWidth: 1, borderColor: 'gainsboro', marginBottom: 20, marginTop: 20}}></View>
 
@@ -215,6 +218,7 @@ export default class DriversRest extends Component {
       </View>
     );
   }
+ 
 }
 
 const styles = StyleSheet.create({
@@ -318,4 +322,4 @@ var MovingBar = React.createClass({
 });
 
 AppRegistry.registerComponent('DriversRest', () => DriversRest);
-//>>>>>>> 44992ec9a055df0c8cbc2b3b95d2e73704aeef52
+
