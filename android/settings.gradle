@@ -7,3 +7,5 @@ include ':RNSound', ':app'
 project(':RNSound').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-sound/android')
 include ':RNAudioPlayer', ':app'
 project(':RNAudioPlayer').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-audioplayer/android')
+include ':react-native-country-picker', ':app'
+project(':react-native-country-picker').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-country-picker/android')

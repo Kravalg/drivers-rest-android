@@ -10,6 +10,8 @@
     "react": "15.4.2",
     "react-native": "0.40.0",
     "react-native-audioplayer": "^0.2.0",
+    "react-native-country-picker": "^1.0.2",
+    "react-native-country-picker-modal": "^0.2.10",
     "react-native-geocoder": "^0.4.5",
     "react-native-sound": "^0.8.3"
   },

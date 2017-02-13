@@ -12,6 +12,7 @@ import {
   Text,
   Button,
   TouchableOpacity,
+  TouchableHighlight,
   Image,
   View
 } from 'react-native';
@@ -27,28 +28,25 @@ let valuels = LocalStorage.get('@App:test').then((value) => {
 }).done();
 **/
 
+
+
+
 export default class DriversRest extends Component {
+
+
+
   render() {
     return (
             // Position Geocoding
       <View style={styles.container}>
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
           <View style={{ width: 140 }} >
-           <TouchableOpacity onPress={this.playSound}>
-              <Text style={styles.startButton}>
-                ENTER {'\n'}
-                START {'\n'}
-                COUNTRY
-              </Text>
-            </TouchableOpacity>
+            <ButtonStart />
             
           </View>
+
           <View style={{ width: 140 }} >
-              <Text style={styles.endButton}>
-                  ENTER {'\n'}
-                  END {'\n'}
-                  COUNTRY
-              </Text>
+              <ButtonEnd/>
           </View>
         </View>
 
@@ -57,12 +55,14 @@ export default class DriversRest extends Component {
 
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
           <View style={{ flex: 0.2, justifyContent: 'center', alignItems: 'center'}} >
-              <View style={styles.imgBorderButton} >
-                <Image
-                  style={styles.imgButton}
-                  source={require('./img/buttonAll.jpeg')}
-                />
-              </View>
+            <TouchableOpacity>
+                <View style={styles.imgBorderButton} >
+                  <Image
+                    style={styles.imgButton}
+                    source={require('./img/buttonAll.jpeg')}
+                  />
+                </View>
+            </TouchableOpacity>  
           </View>
           <View style={{ flex: 0.6, justifyContent: 'center', alignItems: 'center'}} >
               <View style={{ borderColor: 'white', borderWidth: 1, width: 200}} >
@@ -81,12 +81,14 @@ export default class DriversRest extends Component {
 
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
           <View style={{ flex: 0.2, justifyContent: 'center', alignItems: 'center'}} >
+            <TouchableOpacity>
               <View style={styles.imgBorderButton} >
                 <Image
                   style={styles.imgButton}
                   source={require('./img/buttonDrive.jpeg')}
                 />
               </View>
+            </TouchableOpacity>
           </View>
           <View style={{ flex: 0.6, justifyContent: 'center', alignItems: 'center'}} >
               <View style={{ borderColor: 'white', borderWidth: 1, width: 200}} >
@@ -105,12 +107,14 @@ export default class DriversRest extends Component {
 
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
           <View style={{ flex: 0.2, justifyContent: 'center', alignItems: 'center'}} >
+            <TouchableOpacity>
               <View style={styles.imgBorderButton} >
                 <Image
                   style={styles.imgButton}
                   source={require('./img/buttonD.jpeg')}
                 />
               </View>
+            </TouchableOpacity>
           </View>
           <View style={{ flex: 0.6, justifyContent: 'center', alignItems: 'center'}} >
               <View style={{ borderColor: 'white', borderWidth: 1, width: 200}} >
@@ -129,17 +133,19 @@ export default class DriversRest extends Component {
 
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
           <View style={{ flex: 0.2, justifyContent: 'center', alignItems: 'center'}} >
+            <TouchableOpacity>
               <View style={styles.imgBorderButton} >
                 <Image
                   style={styles.imgButton}
                   source={require('./img/buttonW.jpeg')}
                 />
               </View>
+            </TouchableOpacity>
           </View>
           <View style={{ flex: 0.6, justifyContent: 'center', alignItems: 'center'}} >
               <View style={{ borderColor: 'white', borderWidth: 1, width: 200}} >
                   <MovingBar
-                      color={'green'} styleAttr="Horizontal" indeterminate={false} />
+                      color={'red'} styleAttr="Horizontal" indeterminate={false} />
               </View>
           </View>
           <View style={{ flex: 0.2, justifyContent: 'center', alignItems: 'center'}} >
@@ -155,78 +161,98 @@ export default class DriversRest extends Component {
 
         <View style={{ flexDirection: 'row'}}>
           <View style={{ flex: 0.2 , justifyContent: 'center', alignItems: 'center'}} >
+            <TouchableOpacity>
               <View style={{ borderColor: 'white', borderWidth: 2, backgroundColor: 'red', borderRadius: 5}} >
                   <Text style={styles.footer15}>
                     {15}
                   </Text>
               </View>
+             </TouchableOpacity> 
           </View>
           <View style={{ flex: 0.2 , justifyContent: 'center', alignItems: 'center'}} >
+            <TouchableOpacity>
               <View style={{ borderColor: 'white', borderWidth: 2, backgroundColor: 'red', borderRadius: 5}} >
                   <Text style={styles.footer15}>
                     {15}
                   </Text>
               </View>
+             </TouchableOpacity> 
           </View>
           <View style={{ flex: 0.2 , justifyContent: 'center', alignItems: 'center'}} >
+            <TouchableOpacity>
               <View style={{ borderColor: 'white', borderWidth: 2, backgroundColor: 'black', borderRadius: 5}} >
                 <Text style={styles.footer15}>
                   {15}
                 </Text>
               </View>
+            </TouchableOpacity>
           </View>
           <View style={{ flex: 0.2 , justifyContent: 'center', alignItems: 'center'}} >
+            <TouchableOpacity>
               <View style={{ borderColor: 'white', borderWidth: 2, backgroundColor: 'red', borderRadius: 30}} >
                   <Text style={styles.circleButton}>
                     {10}
                   </Text>
               </View>
+             </TouchableOpacity> 
           </View>
           <View style={{ flex: 0.2 , justifyContent: 'flex-end', alignItems: 'center', marginTop: 15}} >
+            <TouchableOpacity>
               <View style={{ borderColor: 'white', borderWidth: 1, backgroundColor: 'green'}} >
                 <Text style={styles.toggleButton}>
                   {24}
                 </Text>
               </View>
+            </TouchableOpacity>
           </View>
         </View>
 
 
         <View style={{ flexDirection: 'row'}}>
           <View style={{ flex: 0.2 , justifyContent: 'center', alignItems: 'center', marginTop: 10}} >
+            <TouchableOpacity>
               <View style={{ borderColor: 'aquamarine', borderWidth: 2, backgroundColor: 'red', borderRadius: 5}} >
                   <Text style={styles.footer9}>
                     {9}
                   </Text>
               </View>
+            </TouchableOpacity>
           </View>
           <View style={{ flex: 0.2 , justifyContent: 'center', alignItems: 'center', marginTop: 10}} >
+            <TouchableOpacity>
               <View style={{ borderColor: 'aquamarine', borderWidth: 2, backgroundColor: 'red', borderRadius: 5}} >
                   <Text style={styles.footer9}>
                     {9}
                   </Text>
               </View>
+             </TouchableOpacity> 
           </View>
           <View style={{ flex: 0.2 , justifyContent: 'center', alignItems: 'center', marginTop: 10}} >
+            <TouchableOpacity>
               <View style={{ borderColor: 'aquamarine', borderWidth: 2, backgroundColor: 'black', borderRadius: 5}} >
                 <Text style={styles.footer9}>
                   {9}
                 </Text>
               </View>
+            </TouchableOpacity>
           </View>
           <View style={{ flex: 0.2 , justifyContent: 'center', alignItems: 'center', marginTop: 10}} >
+            <TouchableOpacity>
               <View style={{ borderColor: 'white', borderWidth: 2, backgroundColor: 'black', borderRadius: 30}} >
                 <Text style={styles.circleButton}>
                   {10}
                 </Text>
               </View>
+             </TouchableOpacity> 
           </View>
           <View style={{ flex: 0.2 , justifyContent: 'flex-start', alignItems: 'center'}} >
+            <TouchableOpacity>
               <View style={{ borderColor: 'white', borderWidth: 1, backgroundColor: 'black'}} >
                 <Text style={styles.toggleButton}>
                   {45}
                 </Text>
               </View>
+             </TouchableOpacity> 
           </View>
         </View>
 
@@ -234,8 +260,11 @@ export default class DriversRest extends Component {
     );
   }
 
- 
+ startButton(){ alert('hi bro!')}
+
 }
+
+
 
 const styles = StyleSheet.create({
   container: {
@@ -269,7 +298,7 @@ const styles = StyleSheet.create({
     padding: 5
   },
   startButton: {
-    backgroundColor: 'green',
+    backgroundColor: 'red',
     color: 'white',
     textAlign: 'center',
     fontWeight: 'bold',
@@ -321,6 +350,14 @@ const styles = StyleSheet.create({
       backgroundColor: 'gainsboro',
       margin: 2
   },
+  startButtonOn: {
+      backgroundColor: 'green'
+  },
+  mi: {
+
+      padding: 100,
+      height:30
+  }
 });
 
 var ProgressBar = require('ProgressBarAndroid');
@@ -346,12 +383,60 @@ var MovingBar = React.createClass({
  render: function() {
      return <ProgressBar
              progress={this.state.progress} {...this.props}
+             height={30}
+             
      />;
  }
 
 
 
 });
+
+var ButtonStart = React.createClass({
+ getInitialState: function () {
+    return { toggle: false,  titleText: 'ENTER \n START \n COUNTRY'};
+  },
+   
+  render: function() {
+    return (
+       <TouchableHighlight 
+          onPress={()=> this.setState({
+              toggle: !this.state.toggle, 
+              titleText: 'ENTER \n START \n COUNTRY:  '+ Geolocation.getNameCountry(),
+              sound: SoundPlay.playShortSound('pip.mp3', 3000)
+
+            })}>
+              <Text style={[styles.startButton, this.state.toggle && styles.startButtonOn]}>
+                  {this.state.titleText}
+              </Text>
+      </TouchableHighlight>
+    );
+  }
+});
+
+var ButtonEnd = React.createClass({
+ getInitialState: function () {
+    return { toggle: false,  titleText: 'ENTER \n END \n COUNTRY'};
+  },
+   
+  render: function() {
+    return (
+       <TouchableHighlight 
+          onPress={()=> this.setState({
+              toggle: !this.state.toggle, 
+              titleText: 'ENTER \n END \n COUNTRY:  '+ Geolocation.getNameCountry(),
+              sound: SoundPlay.playShortSound('pip.mp3', 3000)
+
+            })}>
+              <Text style={[styles.startButton, this.state.toggle && styles.startButtonOn]}>
+                  {this.state.titleText}
+              </Text>
+      </TouchableHighlight>
+    );
+  }
+});
+
+
 
 AppRegistry.registerComponent('DriversRest', () => DriversRest);
 

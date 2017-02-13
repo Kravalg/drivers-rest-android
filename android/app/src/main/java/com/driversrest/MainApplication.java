@@ -12,6 +12,7 @@ import com.facebook.soloader.SoLoader;
 import com.devfd.RNGeocoder.RNGeocoderPackage;
 import com.zmxv.RNSound.RNSoundPackage;
 import com.sh3rawi.RNAudioPlayer.*; 
+import com.tofugear.countrypicker.*;
 
 
 
@@ -33,6 +34,7 @@ public class MainApplication extends Application implements ReactApplication {
           new RNGeocoderPackage(),
           new RNSoundPackage(),
           new RNAudioPlayer()
+          
 
       );
     }
