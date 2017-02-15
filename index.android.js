@@ -10,6 +10,7 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
+  StatusBar,
   Button,
   TouchableOpacity,
   TouchableHighlight,
@@ -19,7 +20,9 @@ import {
 import LocalStorage from './android/class/LocalStorage';
 import Geolocation from './android/class/Geolocation';
 import SoundPlay from './android/class/SoundPlay';
-
+import Country from './android/class/Country';
+import CountryPicker, {getAllCountries} from 'react-native-country-picker-modal';
+const NORTH_AMERICA = ['CA', 'MX', 'US'];
 
 /**
 LocalStorage.set('@App:test', 'test');
@@ -28,32 +31,41 @@ let valuels = LocalStorage.get('@App:test').then((value) => {
 }).done();
 **/
 
+   
+    
+
+
 
 
 
 export default class DriversRest extends Component {
-
+  constructor(props) {
+    StatusBar.setHidden(true);
+    super(props);
+    this.state = {
+       cca2:'',
+       callingCode:1
+    };
+    
+  }
 
 
   render() {
     return (
             // Position Geocoding
       <View style={styles.container}>
-        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-          <View style={{ width: 140 }} >
-            <ButtonStart />
-            
-          </View>
+      
 
+        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+          <View style={{ width: 140 }} >    
+                <ButtonStart/>                        
+          </View>
           <View style={{ width: 140 }} >
               <ButtonEnd/>
           </View>
         </View>
-
-
-        <View style={{height: 1, borderTopWidth: 1, borderColor: 'gainsboro', marginBottom: 20, marginTop: 20}}></View>
-
-        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+      <View style={{height: 1, borderTopWidth: 1, borderColor: 'gainsboro', marginBottom: 20, marginTop: 20}}></View>
+       <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
           <View style={{ flex: 0.2, justifyContent: 'center', alignItems: 'center'}} >
             <TouchableOpacity>
                 <View style={styles.imgBorderButton} >
@@ -354,10 +366,9 @@ const styles = StyleSheet.create({
       backgroundColor: 'green'
   },
   mi: {
-
-      padding: 100,
-      height:30
+    top: 100
   }
+
 });
 
 var ProgressBar = require('ProgressBarAndroid');
@@ -394,44 +405,70 @@ var MovingBar = React.createClass({
 
 var ButtonStart = React.createClass({
  getInitialState: function () {
-    return { toggle: false,  titleText: 'ENTER \n START \n COUNTRY'};
+    return { toggle: false,  titleText: 'ENTER \n START \n COUNTRY ', country: null, cca2:'',
+       callingCode:1 };
   },
    
-  render: function() {
-    return (
-       <TouchableHighlight 
-          onPress={()=> this.setState({
-              toggle: !this.state.toggle, 
-              titleText: 'ENTER \n START \n COUNTRY:  '+ Geolocation.getNameCountry(),
-              sound: SoundPlay.playShortSound('pip.mp3', 3000)
+  onClick: function(){
 
-            })}>
-              <Text style={[styles.startButton, this.state.toggle && styles.startButtonOn]}>
-                  {this.state.titleText}
-              </Text>
-      </TouchableHighlight>
+    Geolocation.getNameCountry().then( result => {
+        this.setState({
+                country: result 
+              });
+      });  
+
+    this.setState({
+          toggle: !this.state.toggle,  
+          titleText: 'ENTER \n START \n COUNTRY:  ',
+          //sound: SoundPlay.playShortSound('pip.mp3', 3000)
+          mode: this.countryPicker.openModal()
+          
+
+      })
+  },
+  render: function() {
+    return (  
+      <View>
+         <TouchableOpacity 
+            onPress={ this.onClick}          
+            >
+                <Text style={[styles.startButton, this.state.toggle && styles.startButtonOn]}>
+                    {this.state.titleText+(this.state.country !== null ? JSON.stringify(this.state.cca2, null, 2) : '')}
+                </Text>
+            <View style={styles.mi} >    
+                 <CountryPicker
+                ref={(countryPicker) => { this.countryPicker = countryPicker; }}
+                onChange={(value)=> this.setState({country: value, cca2: value.cca2})}
+                cca2={this.state.cca2}
+                translation='rus'
+                closeable
+              /> 
+           </View>   
+        </TouchableOpacity>
+          
+
+           
+      </View>
     );
   }
 });
 
 var ButtonEnd = React.createClass({
  getInitialState: function () {
-    return { toggle: false,  titleText: 'ENTER \n END \n COUNTRY'};
+    return { toggle: false,  titleText: 'ENTER \n END \n COUNTRY', cca2:'US',
+       callingCode:1};
   },
    
   render: function() {
     return (
-       <TouchableHighlight 
-          onPress={()=> this.setState({
-              toggle: !this.state.toggle, 
-              titleText: 'ENTER \n END \n COUNTRY:  '+ Geolocation.getNameCountry(),
-              sound: SoundPlay.playShortSound('pip.mp3', 3000)
-
-            })}>
+      <View>
+       <TouchableHighlight onPress={()=> this.countryPicker.openModal()}>
               <Text style={[styles.startButton, this.state.toggle && styles.startButtonOn]}>
                   {this.state.titleText}
               </Text>
       </TouchableHighlight>
+   
+        </View>     
     );
   }
 });
