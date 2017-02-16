@@ -22,7 +22,7 @@ import Geolocation from './android/class/Geolocation';
 import SoundPlay from './android/class/SoundPlay';
 import Country from './android/class/Country';
 import CountryPicker, {getAllCountries} from 'react-native-country-picker-modal';
-const NORTH_AMERICA = ['CA', 'MX', 'US'];
+
 
 /**
 LocalStorage.set('@App:test', 'test');
@@ -32,12 +32,6 @@ let valuels = LocalStorage.get('@App:test').then((value) => {
 **/
 
    
-    
-
-
-
-
-
 export default class DriversRest extends Component {
   constructor(props) {
     StatusBar.setHidden(true);
@@ -53,17 +47,8 @@ export default class DriversRest extends Component {
   render() {
     return (
             // Position Geocoding
-      <View style={styles.container}>
-      
-
-        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-          <View style={{ width: 140 }} >    
-                <ButtonStart/>                        
-          </View>
-          <View style={{ width: 140 }} >
-              <ButtonEnd/>
-          </View>
-        </View>
+      <View style={styles.container}>       
+           <StartWork/>
       <View style={{height: 1, borderTopWidth: 1, borderColor: 'gainsboro', marginBottom: 20, marginTop: 20}}></View>
        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
           <View style={{ flex: 0.2, justifyContent: 'center', alignItems: 'center'}} >
@@ -363,10 +348,14 @@ const styles = StyleSheet.create({
       margin: 2
   },
   startButtonOn: {
-      backgroundColor: 'green'
+      backgroundColor: 'green',
+      color: 'white',
+      textAlign: 'center',
+      fontWeight: 'bold',
+      padding: 5
   },
   mi: {
-    top: 100
+    top: -100
   }
 
 });
@@ -403,10 +392,10 @@ var MovingBar = React.createClass({
 
 });
 
-var ButtonStart = React.createClass({
+var StartWork = React.createClass({
  getInitialState: function () {
     return { toggle: false,  titleText: 'ENTER \n START \n COUNTRY ', country: null, cca2:'',
-       callingCode:1 };
+       callingCode:1,titleTextEnd: 'ENTER \n END \n COUNTRY ', };
   },
    
   onClick: function(){
@@ -419,23 +408,38 @@ var ButtonStart = React.createClass({
 
     this.setState({
           toggle: !this.state.toggle,  
-          titleText: 'ENTER \n START \n COUNTRY:  ',
+          titleText: 'ENTER \n START \n COUNTRY',
+          titleTextEnd: 'ENTER \n END \n COUNTRY:  ',
           //sound: SoundPlay.playShortSound('pip.mp3', 3000)
           mode: this.countryPicker.openModal()
           
 
       })
   },
+  clickColor: function(){
+      this.setState({
+          toggle: !this.state.toggle,
+          sound: SoundPlay.playShortSound('pip.mp3', 3000)
+      })
+  },
   render: function() {
-    return (  
-      <View>
-         <TouchableOpacity 
-            onPress={ this.onClick}          
-            >
-                <Text style={[styles.startButton, this.state.toggle && styles.startButtonOn]}>
-                    {this.state.titleText+(this.state.country !== null ? JSON.stringify(this.state.cca2, null, 2) : '')}
-                </Text>
-            <View style={styles.mi} >    
+    return (
+    <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+          <View style={{ width: 140 }} >    
+               <View>
+                 { this.state.country !== null ? 
+                  <Text style={[styles.startButton]}>
+                      {this.state.titleText}
+                  </Text>:
+                <TouchableOpacity onPress={ this.clickColor } >
+                        <Text style={[styles.startButton, this.state.toggle && styles.startButtonOn]}>
+                            {this.state.titleText}
+                        </Text>                      
+                </TouchableOpacity>
+                }
+              </View>                      
+          </View>
+           <View style={styles.mi} >    
                  <CountryPicker
                 ref={(countryPicker) => { this.countryPicker = countryPicker; }}
                 onChange={(value)=> this.setState({country: value, cca2: value.cca2})}
@@ -443,35 +447,26 @@ var ButtonStart = React.createClass({
                 translation='rus'
                 closeable
               /> 
-           </View>   
-        </TouchableOpacity>
-          
-
-           
-      </View>
+           </View>
+          <View style={{ width: 140 }} >
+             <View>
+                 {this.state.toggle !== false || this.state.country ? 
+                <TouchableOpacity onPress={ this.onClick}  >  
+                        <Text style={this.state.toggle && this.state.country == null ? styles.startButtonOn : styles.startButton }>
+                            {this.state.titleTextEnd+(this.state.country !== null ? JSON.stringify(this.state.cca2, null, 2) : '')}
+                        </Text>
+                </TouchableOpacity> : 
+                    <Text style={[styles.startButton, this.state.toggle && styles.startButtonOn]}>
+                        {this.state.titleTextEnd+(this.state.country !== null ? JSON.stringify(this.state.cca2, null, 2) : '')}
+                    </Text> }
+              </View>
+          </View>
+      </View>    
     );
   }
 });
 
-var ButtonEnd = React.createClass({
- getInitialState: function () {
-    return { toggle: false,  titleText: 'ENTER \n END \n COUNTRY', cca2:'US',
-       callingCode:1};
-  },
-   
-  render: function() {
-    return (
-      <View>
-       <TouchableHighlight onPress={()=> this.countryPicker.openModal()}>
-              <Text style={[styles.startButton, this.state.toggle && styles.startButtonOn]}>
-                  {this.state.titleText}
-              </Text>
-      </TouchableHighlight>
-   
-        </View>     
-    );
-  }
-});
+
 
 
 
