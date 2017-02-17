@@ -13,6 +13,7 @@
     "react-native-country-picker": "^1.0.2",
     "react-native-country-picker-modal": "^0.2.10",
     "react-native-geocoder": "^0.4.5",
+    "react-native-progress": "^3.2.0",
     "react-native-sound": "^0.8.3"
   },
   "devDependencies": {

@@ -22,6 +22,7 @@ import Geolocation from './android/class/Geolocation';
 import SoundPlay from './android/class/SoundPlay';
 import Country from './android/class/Country';
 import CountryPicker, {getAllCountries} from 'react-native-country-picker-modal';
+import * as Progress from 'react-native-progress';
 
 
 /**
@@ -62,9 +63,8 @@ export default class DriversRest extends Component {
             </TouchableOpacity>  
           </View>
           <View style={{ flex: 0.6, justifyContent: 'center', alignItems: 'center'}} >
-              <View style={{ borderColor: 'white', borderWidth: 1, width: 200}} >
-                  <MovingBar
-                      color={'green'} styleAttr="Horizontal" indeterminate={false} />
+              <View style={{ borderColor: 'white', borderWidth: 1, width: 200, height: 30}} >
+                  <MovingBar/>             
               </View>
           </View>
           <View style={{ flex: 0.2, height: 65, justifyContent: 'center', alignItems: 'center'}} >
@@ -88,9 +88,8 @@ export default class DriversRest extends Component {
             </TouchableOpacity>
           </View>
           <View style={{ flex: 0.6, justifyContent: 'center', alignItems: 'center'}} >
-              <View style={{ borderColor: 'white', borderWidth: 1, width: 200}} >
-                  <MovingBar
-                      color={'green'} styleAttr="Horizontal" indeterminate={false} />
+              <View style={{ borderColor: 'white', borderWidth: 1, width: 200, height: 30}} >
+                  <MovingBar/>
               </View>
           </View>
           <View style={{ flex: 0.2, height: 65, justifyContent: 'center', alignItems: 'center'}} >
@@ -114,9 +113,8 @@ export default class DriversRest extends Component {
             </TouchableOpacity>
           </View>
           <View style={{ flex: 0.6, justifyContent: 'center', alignItems: 'center'}} >
-              <View style={{ borderColor: 'white', borderWidth: 1, width: 200}} >
-                  <MovingBar
-                      color={'green'} styleAttr="Horizontal" indeterminate={false} />
+              <View style={{ borderColor: 'white', borderWidth: 1, width: 200, height: 30}} >
+                  <MovingBar/>
               </View>
           </View>
           <View style={{ flex: 0.2, height: 65, justifyContent: 'center', alignItems: 'center'}} >
@@ -140,9 +138,8 @@ export default class DriversRest extends Component {
             </TouchableOpacity>
           </View>
           <View style={{ flex: 0.6, justifyContent: 'center', alignItems: 'center'}} >
-              <View style={{ borderColor: 'white', borderWidth: 1, width: 200}} >
-                  <MovingBar
-                      color={'red'} styleAttr="Horizontal" indeterminate={false} />
+              <View style={{ borderColor: 'white', borderWidth: 1, width: 200, height: 30}} >
+                  <MovingBar/>
               </View>
           </View>
           <View style={{ flex: 0.2, justifyContent: 'center', alignItems: 'center'}} >
@@ -381,11 +378,7 @@ var MovingBar = React.createClass({
      }, 1000 );
  },
  render: function() {
-     return <ProgressBar
-             progress={this.state.progress} {...this.props}
-             height={30}
-             
-     />;
+     return <Progress.Bar progress={this.state.progress} width={200} height={30} color={['green']}  />;
  }
 
 
