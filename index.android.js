@@ -62,9 +62,54 @@ export default class DriversRest extends Component {
                 </View>
             </TouchableOpacity>  
           </View>
-          <View style={{ flex: 0.6, justifyContent: 'center', alignItems: 'center'}} >
-              <View style={{ borderColor: 'white', borderWidth: 1, width: 200, height: 30}} >
-                  <MovingBar/>             
+          <View style={{ flex: 0.6, justifyContent: 'center', alignItems: 'center', flexDirection: 'row'}} >
+              <View style={{ flex: 0.7, justifyContent: 'center', alignItems: 'flex-end'}} >
+                  <View style={{width: 145, height: 15, justifyContent: 'center', alignItems: 'flex-end'}} >
+                      <Text style={{color: 'white', fontWeight: 'bold'}}>
+                         {2.13}
+                      </Text>
+                  </View>
+                  <View style={{ borderColor: 'white', borderWidth: 1, width: 145, height: 15}} >
+                      <MovingBar width={145} height={15} color={'green'}/>
+                  </View>
+                  <View style={{width: 145, height: 30, justifyContent: 'flex-end', alignItems: 'flex-end'}} >
+                      <Text style={{
+                          backgroundColor: 'green',
+                          fontSize: 17,
+                          color: 'white',
+                          paddingTop: 2,
+                          paddingBottom: 2,
+                          paddingLeft: 5,
+                          paddingRight: 5,
+                          fontWeight: 'bold'
+                      }}>
+                          {13}
+                      </Text>
+                  </View>
+              </View>
+              <View style={{ flex: 0.3, justifyContent: 'center', alignItems: 'flex-start'}} >
+                  <View style={{width: 60, height: 15, justifyContent: 'center', alignItems: 'flex-end'}} >
+                        <Text style={{color: 'white', fontWeight: 'bold'}}>
+                           {4.13}
+                        </Text>
+                    </View>
+                    <View style={{ borderColor: 'white', borderWidth: 1, width: 60, height: 15}} >
+                        <MovingBar width={60} height={15} color={'yellow'}/>
+                    </View>
+                    <View style={{width: 60, height: 30, justifyContent: 'flex-end', alignItems: 'flex-end'}} >
+                        <Text style={{
+                            backgroundColor: 'red',
+                            fontSize: 17,
+                            color: 'white',
+                            paddingTop: 2,
+                            paddingBottom: 2,
+                            paddingLeft: 5,
+                            paddingRight: 5,
+                            fontWeight: 'bold'
+                        }}>
+                            {15}
+                        </Text>
+                    </View>
               </View>
           </View>
           <View style={{ flex: 0.2, height: 65, justifyContent: 'center', alignItems: 'center'}} >
@@ -87,10 +132,55 @@ export default class DriversRest extends Component {
               </View>
             </TouchableOpacity>
           </View>
-          <View style={{ flex: 0.6, justifyContent: 'center', alignItems: 'center'}} >
-              <View style={{ borderColor: 'white', borderWidth: 1, width: 200, height: 30}} >
-                  <MovingBar/>
-              </View>
+          <View style={{ flex: 0.6, justifyContent: 'center', alignItems: 'center', flexDirection: 'row'}} >
+              <View style={{ flex: 0.3, justifyContent: 'center', alignItems: 'flex-end'}} >
+                    <View style={{width: 54, height: 15, justifyContent: 'center', alignItems: 'flex-end'}} >
+                        <Text style={{color: 'white', fontWeight: 'bold'}}>
+                           {2.13}
+                        </Text>
+                    </View>
+                    <View style={{ borderColor: 'white', borderWidth: 1, width: 54, height: 20}} >
+                        <MovingBar width={54} height={20} color={'green'}/>
+                    </View>
+                    <View style={{width: 54, height: 25, justifyContent: 'flex-end', alignItems: 'flex-end'}} >
+                        <Text style={{
+                            backgroundColor: 'green',
+                            fontSize: 14,
+                            color: 'white',
+                            paddingTop: 2,
+                            paddingBottom: 2,
+                            paddingLeft: 5,
+                            paddingRight: 5,
+                            fontWeight: 'bold'
+                        }}>
+                            {15}
+                        </Text>
+                    </View>
+                </View>
+                <View style={{ flex: 0.7, justifyContent: 'center', alignItems: 'flex-start'}} >
+                    <View style={{width: 152, height: 15, justifyContent: 'center', alignItems: 'flex-end'}} >
+                          <Text style={{color: 'white', fontWeight: 'bold'}}>
+                             {4.13}
+                          </Text>
+                      </View>
+                      <View style={{ borderColor: 'white', borderWidth: 1, width: 152, height: 20}} >
+                          <MovingBar width={152} height={20} color={'green'}/>
+                      </View>
+                      <View style={{width: 152, height: 25, justifyContent: 'flex-end', alignItems: 'flex-end'}} >
+                          <Text style={{
+                              backgroundColor: 'red',
+                              fontSize: 14,
+                              color: 'white',
+                              paddingTop: 2,
+                              paddingBottom: 2,
+                              paddingLeft: 5,
+                              paddingRight: 5,
+                              fontWeight: 'bold'
+                          }}>
+                              {30}
+                          </Text>
+                      </View>
+                </View>
           </View>
           <View style={{ flex: 0.2, height: 65, justifyContent: 'center', alignItems: 'center'}} >
               <View style={{ width: 50, borderColor: 'white', borderWidth: 1, backgroundColor: 'green'}} >
@@ -112,10 +202,80 @@ export default class DriversRest extends Component {
               </View>
             </TouchableOpacity>
           </View>
-          <View style={{ flex: 0.6, justifyContent: 'center', alignItems: 'center'}} >
-              <View style={{ borderColor: 'white', borderWidth: 1, width: 200, height: 30}} >
-                  <MovingBar/>
-              </View>
+          <View style={{ flex: 0.6, justifyContent: 'center', alignItems: 'center', flexDirection: 'row'}} >
+              <View style={{ flex: 0.3, justifyContent: 'center', alignItems: 'flex-end'}} >
+                    <View style={{width: 54, height: 15, justifyContent: 'center', alignItems: 'flex-end'}} >
+                        <Text style={{color: 'white', fontWeight: 'bold'}}>
+                           {2.13}
+                        </Text>
+                    </View>
+                    <View style={{ borderColor: 'white', borderWidth: 1, width: 54, height: 15}} >
+                        <MovingBar width={54} height={15} color={'green'}/>
+                    </View>
+                    <View style={{width: 54, height: 30, justifyContent: 'flex-start', alignItems: 'flex-end'}} >
+                        <Text style={{
+                            backgroundColor: 'green',
+                            fontSize: 15,
+                            color: 'white',
+                            paddingTop: 2,
+                            paddingBottom: 2,
+                            paddingLeft: 5,
+                            paddingRight: 5,
+                            marginTop: 2,
+                            fontWeight: 'bold'
+                        }}>
+                            {3}
+                        </Text>
+                    </View>
+                </View>
+                <View style={{ flex: 0.4, justifyContent: 'center', alignItems: 'flex-end'}} >
+                    <View style={{width: 91, height: 15, justifyContent: 'center', alignItems: 'flex-end'}} >
+                          <Text style={{color: 'white', fontWeight: 'bold'}}>
+                             {4.13}
+                          </Text>
+                      </View>
+                      <View style={{ borderColor: 'white', borderWidth: 1, width: 91, height: 15}} >
+                          <MovingBar width={91} height={15} color={'green'}/>
+                      </View>
+                      <View style={{width: 91, height: 30, justifyContent: 'flex-end', alignItems: 'flex-end'}} >
+                          <Text style={{
+                              backgroundColor: 'red',
+                              fontSize: 17,
+                              color: 'white',
+                              paddingTop: 2,
+                              paddingBottom: 2,
+                              paddingLeft: 5,
+                              paddingRight: 5,
+                              fontWeight: 'bold'
+                          }}>
+                              {9}
+                          </Text>
+                      </View>
+                </View>
+                <View style={{ flex: 0.3, justifyContent: 'center', alignItems: 'flex-start'}} >
+                    <View style={{width: 60, height: 15, justifyContent: 'center', alignItems: 'flex-end'}} >
+                          <Text style={{color: 'white', fontWeight: 'bold'}}>
+                             {4.13}
+                          </Text>
+                      </View>
+                      <View style={{ borderColor: 'white', borderWidth: 1, width: 60, height: 15}} >
+                          <MovingBar width={60} height={15} color={'green'}/>
+                      </View>
+                      <View style={{width: 60, height: 30, justifyContent: 'flex-end', alignItems: 'flex-end'}} >
+                          <Text style={{
+                              backgroundColor: 'red',
+                              fontSize: 17,
+                              color: 'white',
+                              paddingTop: 2,
+                              paddingBottom: 2,
+                              paddingLeft: 5,
+                              paddingRight: 5,
+                              fontWeight: 'bold'
+                          }}>
+                              {11}
+                          </Text>
+                      </View>
+                </View>
           </View>
           <View style={{ flex: 0.2, height: 65, justifyContent: 'center', alignItems: 'center'}} >
               <View style={{ width: 50, borderColor: 'white', borderWidth: 1, backgroundColor: 'green'}} >
@@ -137,10 +297,55 @@ export default class DriversRest extends Component {
               </View>
             </TouchableOpacity>
           </View>
-          <View style={{ flex: 0.6, justifyContent: 'center', alignItems: 'center'}} >
-              <View style={{ borderColor: 'white', borderWidth: 1, width: 200, height: 30}} >
-                  <MovingBar/>
-              </View>
+          <View style={{ flex: 0.6, justifyContent: 'center', alignItems: 'center', flexDirection: 'row'}} >
+              <View style={{ flex: 0.7, justifyContent: 'center', alignItems: 'flex-end'}} >
+                    <View style={{width: 145, height: 15, justifyContent: 'center', alignItems: 'flex-end'}} >
+                        <Text style={{color: 'white', fontWeight: 'bold'}}>
+                           {2.13}
+                        </Text>
+                    </View>
+                    <View style={{ borderColor: 'white', borderWidth: 1, width: 145, height: 15}} >
+                        <MovingBar width={145} height={15} color={'green'}/>
+                    </View>
+                    <View style={{width: 145, height: 30, justifyContent: 'flex-end', alignItems: 'flex-end'}} >
+                        <Text style={{
+                            backgroundColor: 'green',
+                            fontSize: 17,
+                            color: 'white',
+                            paddingTop: 2,
+                            paddingBottom: 2,
+                            paddingLeft: 5,
+                            paddingRight: 5,
+                            fontWeight: 'bold'
+                        }}>
+                            {24}
+                        </Text>
+                    </View>
+                </View>
+                <View style={{ flex: 0.3, justifyContent: 'center', alignItems: 'flex-start'}} >
+                    <View style={{width: 59, height: 15, justifyContent: 'center', alignItems: 'flex-end'}} >
+                          <Text style={{color: 'white', fontWeight: 'bold'}}>
+                             {4.13}
+                          </Text>
+                      </View>
+                      <View style={{ borderColor: 'white', borderWidth: 1, width: 59, height: 15}} >
+                          <MovingBar width={59} height={15} color={'yellow'}/>
+                      </View>
+                      <View style={{width: 59, height: 30, justifyContent: 'flex-end', alignItems: 'flex-end'}} >
+                          <Text style={{
+                              backgroundColor: 'red',
+                              fontSize: 17,
+                              color: 'white',
+                              paddingTop: 2,
+                              paddingBottom: 2,
+                              paddingLeft: 5,
+                              paddingRight: 5,
+                              fontWeight: 'bold'
+                          }}>
+                              {45}
+                          </Text>
+                      </View>
+                </View>
           </View>
           <View style={{ flex: 0.2, justifyContent: 'center', alignItems: 'center'}} >
               <View style={{ width: 50, borderColor: 'white', borderWidth: 1, backgroundColor: 'orange'}} >
@@ -362,7 +567,7 @@ var TimerMixin = require('react-timer-mixin');
 
 var MovingBar = React.createClass({
  mixins: [TimerMixin],
- minutes: 10,
+ minutes: 1,
  getInitialState: function() {
      return {
         progress: 0
@@ -378,7 +583,14 @@ var MovingBar = React.createClass({
      }, 1000 );
  },
  render: function() {
-     return <Progress.Bar progress={this.state.progress} width={200} height={30} color={['green']}  />;
+     return <Progress.Bar
+         progress={this.state.progress}
+         width={this.props.width}
+         height={this.props.height}
+         color={this.props.color}
+         borderWidth={0}
+         borderRadius={0}
+     />;
  }
 
 
